@@ -1,6 +1,6 @@
 <?php
 
-namespace app;
+namespace app\toolkit\components;
 
 use app\toolkit\components\exceptions\NotFoundException;
 
