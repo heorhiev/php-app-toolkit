@@ -7,6 +7,8 @@ use app\toolkit\components\exceptions\NotFoundException;
 
 class Route
 {
+    private static $_routes;
+
     /**
      * @throws NotFoundException
      */
@@ -25,12 +27,17 @@ class Route
 
             if (class_exists($controllerPath)) {
                 session_start();
-                $controller = new $controllerPath();
-
-                return $controller->main();
+                (new $controllerPath())->main();
             }
         }
 
         throw new NotFoundException();
+    }
+
+
+    public static function add(array $routes): bool
+    {
+        self::$_routes = array_merge(self::$_routes, $routes);
+        return true;
     }
 }
