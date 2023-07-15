@@ -1,6 +1,6 @@
 <?php
 
-namespace app\common\components\repository\interfaces;
+namespace app\toolkit\components\repository\interfaces;
 
 use app\toolkit\components\Entity;
 use app\toolkit\components\repository\Repository;
@@ -22,6 +22,8 @@ interface RepositoryInterface
     public function create(array $attributes): bool;
 
     public function update(array $attributes, array $conditions): bool;
+
+    public function delete(array $conditions): bool;
 
     public static function tableName(): string;
 }

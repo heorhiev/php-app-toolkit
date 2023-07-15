@@ -64,4 +64,27 @@ trait SavedTrait
 
         return $st->execute();
     }
+
+
+    public function delete(array $conditions): bool
+    {
+        // conditions
+        $where = [];
+        foreach ($conditions as $key => $value) {
+            $where[] = $key . ' = ?';
+        }
+        $where = join(' AND ', $where);
+
+        // bind types
+        $types = join('', $this->getBindTypes(array_keys($conditions)));
+
+        // build sql
+        $sql = sprintf('DELETE FROM %s WHERE %s', static::tableName(), $where);
+
+        $st = DBService::getMysqli()->prepare($sql);
+
+        $st->bind_param($types, ...array_values($conditions));
+
+        return $st->execute();
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace app\toolkit\components\repository;
 
+use app\toolkit\components\Entity;
 use app\toolkit\components\repository\interfaces\RepositoryInterface;
 use app\toolkit\components\repository\traits\{FindTrait, SavedTrait, TypesTrait};
 
@@ -23,6 +24,9 @@ abstract class Repository implements RepositoryInterface
     }
 
 
+    /**
+     * @return Entity
+     */
     public function entityClassName(): string
     {
         return $this->_entityClassName;
