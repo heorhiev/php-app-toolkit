@@ -1,0 +1,24 @@
+{
+    "name": "heorhiev/php-app-toolkit",
+    "authors": [
+        {
+            "name": "Ruslan",
+            "email": ""
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "ext-sqlite3": "*"
+    },
+    "extra": {
+        "bootstrap": "heorhiev\\php-app-toolkit\\Bootstrap"
+    },
+    "autoload": {
+        "psr-4": {
+            "heorhiev\\php-app-toolkit\\": "src"
+        }
+    }
+}
