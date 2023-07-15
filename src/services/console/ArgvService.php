@@ -1,8 +1,8 @@
 <?php
 
-namespace app\common\services\console;
+namespace app\toolkit\services\console;
 
-use app\common\services\Service;
+use app\toolkit\services\Service;
 
 
 class ArgvService extends Service

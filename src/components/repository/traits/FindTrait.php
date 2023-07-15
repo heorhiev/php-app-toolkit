@@ -1,10 +1,10 @@
 <?php
 
-namespace app\common\components\repository\traits;
+namespace app\toolkit\components\repository\traits;
 
-use app\common\components\Entity;
-use app\common\components\repository\Repository;
-use app\common\services\db\DBService;
+use app\toolkit\components\Entity;
+use app\toolkit\components\repository\Repository;
+use app\toolkit\services\db\DBService;
 
 
 /**

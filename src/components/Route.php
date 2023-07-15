@@ -2,7 +2,7 @@
 
 namespace app;
 
-use app\common\components\exceptions\NotFoundException;
+use app\toolkit\components\exceptions\NotFoundException;
 
 
 class Route
@@ -13,7 +13,7 @@ class Route
     public static function start($side, ?string $action)
     {
         if ($action) {
-            $basePath = 'app\common\controllers\\';
+            $basePath = 'app\toolkit\controllers\\';
 
             $relativePath = explode('/', $action);
 

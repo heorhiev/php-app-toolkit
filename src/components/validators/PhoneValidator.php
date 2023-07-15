@@ -1,6 +1,6 @@
 <?php
 
-namespace app\common\components\validators;
+namespace app\toolkit\components\validators;
 
 
 class PhoneValidator extends Validator

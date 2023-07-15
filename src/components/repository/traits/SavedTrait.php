@@ -1,8 +1,8 @@
 <?php
 
-namespace app\common\components\repository\traits;
+namespace app\toolkit\components\repository\traits;
 
-use app\common\services\db\DBService;
+use app\toolkit\services\db\DBService;
 
 
 /**

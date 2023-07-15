@@ -1,8 +1,8 @@
 <?php
 
-namespace app\common\components;
+namespace app\toolkit\components;
 
-use app\common\components\repository\Repository;
+use app\toolkit\components\repository\Repository;
 
 
 abstract class Entity

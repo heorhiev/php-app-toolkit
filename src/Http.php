@@ -1,9 +1,9 @@
 <?php
 
-namespace app;
+namespace app\toolkit;
 
-use app\common\components\exceptions\NotFoundException;
-use app\common\services\http\RequestService;
+use app\toolkit\components\exceptions\NotFoundException;
+use app\toolkit\services\http\RequestService;
 
 class Http
 {

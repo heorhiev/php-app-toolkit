@@ -1,9 +1,9 @@
 <?php
 
-namespace app\common\services\http;
- 
+namespace app\toolkit\services\http;
 
-use app\common\services\Service;
+use app\toolkit\services\Service;
+
 
 class ResponseService extends Service
 {

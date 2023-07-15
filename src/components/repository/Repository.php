@@ -1,9 +1,9 @@
 <?php
 
-namespace app\common\components\repository;
+namespace app\toolkit\components\repository;
 
-use app\common\components\repository\interfaces\RepositoryInterface;
-use app\common\components\repository\traits\{FindTrait, SavedTrait, TypesTrait};
+use app\toolkit\components\repository\interfaces\RepositoryInterface;
+use app\toolkit\components\repository\traits\{FindTrait, SavedTrait, TypesTrait};
 
 
 abstract class Repository implements RepositoryInterface

@@ -2,8 +2,8 @@
 
 namespace app;
 
-use app\common\components\exceptions\NotFoundException;
-use app\common\services\console\ArgvService;
+use app\toolkit\components\exceptions\NotFoundException;
+use app\toolkit\services\console\ArgvService;
 
 class Console
 {

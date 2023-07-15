@@ -1,6 +1,6 @@
 <?php
 
-namespace app\common\components\controllers;
+namespace app\toolkit\components\controllers;
 
 
 interface ConsoleControllerInterface

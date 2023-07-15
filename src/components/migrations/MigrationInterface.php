@@ -1,6 +1,6 @@
 <?php
 
-namespace app\common\components\migrations;
+namespace app\toolkit\components\migrations;
 
 
 interface MigrationInterface

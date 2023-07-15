@@ -1,10 +1,10 @@
 <?php
 
-namespace app\common\services\db;
+namespace app\toolkit\services\db;
 
-use app\common\dto\config\DatabaseDto;
-use app\common\services\Service;
-use app\common\services\SettingsService;
+use app\toolkit\dto\config\DatabaseDto;
+use app\toolkit\services\Service;
+use app\toolkit\services\SettingsService;
 use mysqli;
 
 

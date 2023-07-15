@@ -1,8 +1,8 @@
 <?php
 
-namespace app\common\components\validators;
+namespace app\toolkit\components\validators;
 
-use app\common\components\validators\interfaces\ValidatorInterface;
+use app\toolkit\components\validators\interfaces\ValidatorInterface;
 
 
 abstract class Validator implements ValidatorInterface

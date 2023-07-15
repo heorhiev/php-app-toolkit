@@ -2,8 +2,8 @@
 
 namespace app\common\components\repository\interfaces;
 
-use app\common\components\Entity;
-use app\common\components\repository\Repository;
+use app\toolkit\components\Entity;
+use app\toolkit\components\repository\Repository;
 
 
 interface RepositoryInterface

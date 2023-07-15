@@ -1,6 +1,6 @@
 <?php
 
-namespace app\common\dto;
+namespace app\toolkit\dto;
 
 
 class Dto
