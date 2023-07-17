@@ -12,7 +12,7 @@ class Route
     /**
      * @throws NotFoundException
      */
-    public static function start($side, ?string $action)
+    public static function start($side, $action)
     {
         if ($action) {
             $basePath = 'app\toolkit\controllers\\';
