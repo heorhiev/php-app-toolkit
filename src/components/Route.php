@@ -14,16 +14,8 @@ class Route
      */
     public static function start($side, $action)
     {
-        if ($action) {
-            $basePath = 'app\toolkit\controllers\\';
-
-            $relativePath = explode('/', $action);
-
-            $controllerName = ucfirst(array_pop($relativePath)) .  'Controller';
-
-            $relativePath = $relativePath ? join('\\', $relativePath) . '\\' : '';
-
-            $controllerPath = $basePath . $side . '\\' . $relativePath . $controllerName;
+        if (!empty(self::$_routes[$action])) {
+            $controllerPath = self::$_routes[$action];
 
             if (class_exists($controllerPath)) {
                 session_start();
