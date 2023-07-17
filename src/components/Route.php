@@ -3,11 +3,12 @@
 namespace app\toolkit\components;
 
 use app\toolkit\components\exceptions\NotFoundException;
+use app\toolkit\services\LoggerService;
 
 
 class Route
 {
-    private static $_routes;
+    private static $_routes = [];
 
     /**
      * @throws NotFoundException
@@ -19,7 +20,12 @@ class Route
 
             if (class_exists($controllerPath)) {
                 session_start();
-                (new $controllerPath())->main();
+
+                try {
+                    return (new $controllerPath())->main();
+                } catch (\Exception $e) {
+                    LoggerService::error($e);
+                }
             }
         }
 
