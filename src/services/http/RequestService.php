@@ -18,4 +18,10 @@ class RequestService extends Service
     {
         return ArrayService::getValue($_POST, $name, $_POST);
     }
+
+
+    public static function raw()
+    {
+        return file_get_contents('php://input');
+    }
 }    
