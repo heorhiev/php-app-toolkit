@@ -62,7 +62,7 @@ trait FindTrait
 
         $result = $stmt->get_result();
 
-        while ($row = $result->fetch_row()) {
+        while ($row = $result->fetch_assoc()) {
             $this->_result[] = $row;
         }
 
@@ -72,15 +72,17 @@ trait FindTrait
 
     public function asArrayOne(): array
     {
-        return $this->_result;
+        return $this->_result[0] ?? $this->_result;
     }
 
 
     public function asEntityOne(): ?Entity
     {
-        if ($this->_result) {
+        $result = $this->_result[0] ?? $this->_result;
+
+        if ($result) {
             $class = $this->entityClassName();
-            return new $class($this->_result);
+            return new $class($result);
         }
 
         return null;

@@ -28,7 +28,13 @@ trait SavedTrait
 
         $st->bind_param($types, ...array_values($attributes));
 
-        return $st->execute();
+        $executed = $st->execute();
+
+        if (!$executed) {
+            throw new \Exception(print_r($st->error, 1));
+        }
+
+        return $executed;
     }
 
 

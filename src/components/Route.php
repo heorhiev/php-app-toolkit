@@ -23,8 +23,8 @@ class Route
 
                 try {
                     return (new $controllerPath())->main();
-                } catch (\Exception $e) {
-                    LoggerService::error($e);
+                } catch (\Throwable $e) {
+                    LoggerService::error($e->getMessage());
                 }
             }
         }
