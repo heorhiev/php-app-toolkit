@@ -2,6 +2,8 @@
 
 namespace app\toolkit\services;
 
+use app\toolkit\services\AliasService;
+
 
 class RenderService extends Service
 {
@@ -33,6 +35,10 @@ class RenderService extends Service
 
     private static function getPath(string $filename): string
     {
+        if (strstr($filename, '@')) {
+            $filename = AliasService::getAlias($filename);
+        }
+
         return $filename . '.php';
     }
 }
