@@ -12,10 +12,10 @@ class Console
     /**
      * @throws NotFoundException
      */
-    public function __construct($argv)
+    public function __construct($action)
     {
         try {
-            Route::start('console', ArgvService::getCommand($argv));
+            Route::start('console', $action);
         } catch (NotFoundException $exception) {
             Route::start('console', 'NotFound');
         }
